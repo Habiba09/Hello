@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+        </style>
+        <script type="text/javascript">
+            function validate() {
+                if (document.getElementById("name").value != '' & document.getElementById("add").value != '' & document.getElementById("salary").value != '')
+
+                {
+                } else {
+                    alert("enter valid data");
+                    return false;
+                }
+            }
+        </script>
+    </head>
+    <center><br><br>
+        <h1 >Employee Detail</h1>
+        <body id="">
+            <form action="EmployeeServlet?action=insert" method="post" class="indexpage">
+                Employee name <input type="text" name="emp_name" id="name" required="true" /><br><br>
+                Employee Address<input type="text" name="emp_add" id="add"required="true" value="enter address"/><br><br>
+                Employee Salary <input type="text" name="emp_sal" id="salary" required="true"/><br><br>
+                <input type="submit" value="insert" id="insert" />    
+            </form>
+            <!--it should be outside of form action tag--> 
+            <!--         <input type="submit" value="insert">-->
+            <a href="EmployeeServlet?action=display" id="atag"><button>Display</button></a>
+        </body>
+</html>
